@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DonVo.Models", "DonVo.Models\DonVo.Models.csproj", "{8927680D-3FD7-4BF6-9479-D21C6FD23EC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DonVo.DTOs", "DonVo.DTOs\DonVo.DTOs.csproj", "{1E6A88ED-0116-4367-A7ED-0C9F6AE2B57A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DonVo.AuthDomain", "DonVo.AuthDomain\DonVo.AuthDomain.csproj", "{9FA1F1A9-9E4A-4B00-8AFC-747E1C5A22B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DonVo.AdminDomain", "DonVo.AdminDomain\DonVo.AdminDomain.csproj", "{F41BEF52-FF57-405D-9F60-4CD4350F6D1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DonVo.CourseDomain", "DonVo.CourseDomain\DonVo.CourseDomain.csproj", "{F1653C1E-A15E-4801-9CF9-727792DE6C43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DonVo.MentorDomain", "DonVo.MentorDomain\DonVo.MentorDomain.csproj", "{2D1E063E-CB82-4F79-B27F-57012135DA4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DonVo.StudentDomain", "DonVo.StudentDomain\DonVo.StudentDomain.csproj", "{DEFE3C9E-FAAA-4848-9136-B98BBEEFEA68}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8927680D-3FD7-4BF6-9479-D21C6FD23EC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8927680D-3FD7-4BF6-9479-D21C6FD23EC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8927680D-3FD7-4BF6-9479-D21C6FD23EC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8927680D-3FD7-4BF6-9479-D21C6FD23EC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E6A88ED-0116-4367-A7ED-0C9F6AE2B57A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E6A88ED-0116-4367-A7ED-0C9F6AE2B57A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E6A88ED-0116-4367-A7ED-0C9F6AE2B57A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E6A88ED-0116-4367-A7ED-0C9F6AE2B57A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FA1F1A9-9E4A-4B00-8AFC-747E1C5A22B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FA1F1A9-9E4A-4B00-8AFC-747E1C5A22B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FA1F1A9-9E4A-4B00-8AFC-747E1C5A22B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FA1F1A9-9E4A-4B00-8AFC-747E1C5A22B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F41BEF52-FF57-405D-9F60-4CD4350F6D1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F41BEF52-FF57-405D-9F60-4CD4350F6D1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F41BEF52-FF57-405D-9F60-4CD4350F6D1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F41BEF52-FF57-405D-9F60-4CD4350F6D1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1653C1E-A15E-4801-9CF9-727792DE6C43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1653C1E-A15E-4801-9CF9-727792DE6C43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1653C1E-A15E-4801-9CF9-727792DE6C43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1653C1E-A15E-4801-9CF9-727792DE6C43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D1E063E-CB82-4F79-B27F-57012135DA4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D1E063E-CB82-4F79-B27F-57012135DA4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D1E063E-CB82-4F79-B27F-57012135DA4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D1E063E-CB82-4F79-B27F-57012135DA4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEFE3C9E-FAAA-4848-9136-B98BBEEFEA68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEFE3C9E-FAAA-4848-9136-B98BBEEFEA68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEFE3C9E-FAAA-4848-9136-B98BBEEFEA68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEFE3C9E-FAAA-4848-9136-B98BBEEFEA68}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D7CC67AB-BDF6-4453-A11B-C5D96C577AFD}
+	EndGlobalSection
+EndGlobal
