@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
-namespace MOD.AdminService.Controllers
+namespace DonVo.AdminService.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
