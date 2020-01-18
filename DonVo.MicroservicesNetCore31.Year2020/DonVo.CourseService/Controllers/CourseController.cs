@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
-namespace MOD.CourseService.Controllers
+namespace DonVo.CourseService.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
