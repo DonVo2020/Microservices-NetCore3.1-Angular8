@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "MOD.CourseService": {
+    "DonVo.CourseService": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "/",
