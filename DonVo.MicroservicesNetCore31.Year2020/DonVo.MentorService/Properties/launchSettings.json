@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "MOD.MentorService": {
+    "DonVo.MentorService": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "/",
