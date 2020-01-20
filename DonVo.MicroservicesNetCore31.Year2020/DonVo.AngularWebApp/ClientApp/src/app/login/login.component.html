@@ -1,0 +1,52 @@
+<app-student-body></app-student-body>
+<div class="py-5">
+  <div class="row">
+    <div class="col-md-6 mx-auto">
+      <span class="anchor" id="formLogin"></span>
+
+      <!-- form card login -->
+      <div class="card rounded-0">
+        <div class="card-header">
+          <h3 class="mb-0">User Login</h3>
+        </div>
+        <div class="card-body">
+          <form class="form" #studentForm="ngForm">
+            <div class="form-group"
+            [class.has-error]="userNameControl.invalid && userNameControl.touched" 
+              [class.has-success]="userNameControl.valid">
+              <label for="Email" class="control-label">Username</label>
+              <input type="text" [(ngModel)]="loginUserData.Email" id="Email" name="Email" class="form-control rounded-0" 
+              #userNameControl="ngModel" required placeholder="Enter Your Email">
+              <span class="help-block text-danger"
+                  *ngIf="userNameControl.invalid && userNameControl.touched">
+              User Email is Required
+            </span>
+            </div>
+            <div class="form-group"
+            [class.has-error]="userPasswordControl.invalid && userPasswordControl.touched" 
+              [class.has-success]="userPasswordControl.valid">
+              <label for="Password" class="control-label">Password</label>
+              <input type="Password" [(ngModel)]="loginUserData.Password" id="Password" name="Password" class="form-control rounded-0"  
+              #userPasswordControl="ngModel" minlength="6" required placeholder="6 characters minimum">
+              <span class="help-block text-danger"
+                  *ngIf="userPasswordControl.invalid && userPasswordControl.touched">
+              User Password is Required
+            </span>
+            </div>
+            <div class="alert alert-danger" *ngIf="errorServerMessage != null">
+              <strong>Danger! {{errorServerMessage}}</strong> 
+            </div>
+           
+            <button type="button" (click)="loginUser()" [disabled]="studentForm.invalid" class="btn btn-success float-right">Login</button>
+          </form>
+          
+        </div>
+        <!--/card-block-->
+      </div>
+      <!-- /form card login -->
+
+    </div>
+
+
+  </div>
+</div>

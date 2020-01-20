@@ -1,0 +1,19 @@
+<div class="container body" *ngIf="router.url != '/'">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="error-template">
+                <h1>
+                    Oops!</h1>
+                <h2>
+                    404 Not Found</h2>
+                <div class="error-details">
+                    Sorry, an error has occured, Requested page not found!
+                </div>
+                <div class="error-actions">
+                    <a  routerLink="/" routerLinkActive="active" class="btn btn-primary btn-lg"><span class="fa fa-home"></span>
+                        Take Me Home </a><a  routerLink="/contactUs" routerLinkActive="active" class="btn btn-info btn-lg"><span class="fa fa-envelope"></span> Contact Support </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

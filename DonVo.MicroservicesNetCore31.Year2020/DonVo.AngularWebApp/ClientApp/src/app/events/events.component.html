@@ -1,0 +1,32 @@
+<app-student-body></app-student-body>
+<div class="container">
+    <h2 class="text-center text-info">Learn to Grow</h2>
+    <div class="alert alert-info" *ngIf="errorServerMessageEvents != null">
+      <strong>Info! {{errorServerMessageEvents}}</strong> 
+    </div>
+<div class="row mt-5">
+   <div class="col-md-4 mb-3" *ngFor="let event of events">
+     
+    <div class="card text-center">
+      <div class="card-body">
+            <h2 class="card-text">{{event.name}}</h2>
+            <p class="card-text">{{event.description}}</p>
+            <p class="card-text">Course Fee: {{event.courseFee}}</p>
+            <p class="card-text" >Course Id : {{event.id}}</p>
+            <button type="button" class="btn btn-primary" *ngIf="!_authService.loggedIn()" routerLink="/login" routerLinkActive="active">Enroll Now</button>
+            <button type="button" class="btn btn-primary" *ngIf="_authService.loggedIn()" (click)="enrollCourse(event, _authService.loggedInUserName())">Enroll Now</button>
+            
+          </div>
+          <div class="card-footer text-muted">
+            Duration: {{event.duration}}  <br>
+            Mentor: {{event.mentorEmail}}
+          </div>
+          
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+

@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand"routerLink="/" routerLinkActive="active">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      
+      <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"  *ngIf="_authService.loggedInAdmin()">Courses</a>
+                 <div class="dropdown-menu">
+                   <a class="dropdown-item"   routerLink="/addCourses" routerLinkActive="active">Add Courses</a>
+                   <a class="dropdown-item"  routerLink="/viewCourses" routerLinkActive="active">View Courses</a>
+                   <a class="dropdown-item"  routerLink="/mentorsList" routerLinkActive="active">Ongoing Courses</a>
+                 </div>
+               </li> 
+          </ul>
+          
+          <ul class="navbar-nav mr-right">
+              <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"  *ngIf="_authService.loggedInAdmin()">Users List</a>
+                     <div class="dropdown-menu">
+                       <a class="dropdown-item"   routerLink="/studentsShowList" routerLinkActive="active">Students List</a>
+                       <a class="dropdown-item"  routerLink="/mentorsShowList" routerLinkActive="active">Mentors List</a>
+                       
+                     </div>
+                   </li> 
+              </ul>
+      <ul class="navbar-nav">
+          <a class="nav-link" *ngIf="!_authService.loggedInAdmin()" routerLink="/admin-login" routerLinkActive="active">Login</a>
+          <a class="nav-link" style="cursor:pointer" *ngIf="_authService.loggedInAdmin()">Welcome {{_authService.loggedInAdminName()}}</a>
+          <a class="nav-link" style="cursor:pointer" *ngIf="_authService.loggedInAdmin()" (click)="_authService.logoutAdmin()">Logout</a>
+      </ul>
+      
+    </div>
+  </nav> 
+
+ 

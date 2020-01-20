@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" style="cursor:pointer" routerLink="/" routerLinkActive="active">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+              <a class="nav-link" *ngIf="_authService.loggedInMentor()" routerLink="/ongoingCourses" routerLinkActive="active">Ongoing Courses</a>
+            </li>
+        <li class="nav-item">
+          <a class="nav-link"  *ngIf="_authService.loggedInMentor()"  routerLink="/courses" routerLinkActive="active">Enrolled Students</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"   *ngIf="_authService.loggedInMentor()" routerLink="/mentorProfile" routerLinkActive="active">My Profile</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+          <a class="nav-link" style="cursor:pointer" *ngIf="!_authService.loggedInMentor()" routerLink="/mentor-login" routerLinkActive="active">Login</a>
+          <a class="nav-link" style="cursor:pointer" *ngIf="!_authService.loggedInMentor()"  routerLink="/mentor-register" routerLinkActive="active">Register</a>
+          <a class="nav-link" style="cursor:pointer" *ngIf="_authService.loggedInMentor()">Welcome {{_authService.loggedInMentorName()}}</a>
+          <a class="nav-link" style="cursor:pointer"  *ngIf="_authService.loggedInMentor()" (click)="_authService.logoutMentor()">Logout</a> 
+      </ul>
+      
+    </div>
+  </nav> 
+
+  <app-search-course *ngIf="router.url == '/courses' || router.url == '/ongoingCourses'"></app-search-course>

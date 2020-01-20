@@ -1,0 +1,37 @@
+<app-mentor-body></app-mentor-body>
+ <div class="container">
+    <h2 class="text-center text-info">My Students</h2>
+<div class="row mt-5">
+   <div class="col-md-4 mb-3" *ngFor="let course of courses">
+     
+    <div class="card text-center">
+      <div class="card-body">
+            <h2 class="card-text">{{course.name}}</h2>
+            <p class="card-text">{{course.description}}</p>
+            <p class="card-text">Course Fee: {{course.courseFee}}</p>
+            <p class="card-text">Course Id : {{course.id}}</p>
+            <p class="card-text">Student Id: {{course.studentEmail}}</p>
+            <button type="button" class="btn btn-success" (click)="updateEnrolledCourse(course.id,_authService.loggedInMentorName(),course)" data-toggle="tooltip" data-placement="bottom" title="Click To Change Status!">{{course.status}}</button>
+            
+          </div>
+          <div class="card-footer text-muted">
+              Duration: {{course.duration}}  <br>
+              Mentor: {{course.mentorEmail}}
+          </div>
+          
+    </div>
+  </div>
+</div>
+</div> 
+<script>
+  $(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+  </script>
+
+
+
+
+
+
+

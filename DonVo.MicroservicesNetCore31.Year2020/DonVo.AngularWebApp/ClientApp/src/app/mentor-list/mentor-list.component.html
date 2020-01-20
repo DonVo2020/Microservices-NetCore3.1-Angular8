@@ -1,0 +1,37 @@
+<app-admin-body></app-admin-body>
+
+<div class="container">
+	<div class="row">
+        <div class="col-md-12">
+        <h4 class="text-center text-info">Enrolled Users</h4> 
+        <div class="table-responsive">
+              <table id="mytable" class="table table-bordred table-striped">
+                   
+                   <thead>
+                   <th>Id</th>       
+                   <th>Mentor Email</th>
+                    <th>Name</th>
+                     <th>Technology</th>
+                     <th>Course Fee</th>
+                     <th>Duration</th>
+                     <th>Student Email</th>
+                     <th>Status</th>
+                   </thead>
+    <tbody>   
+    <tr *ngFor=" let mentor of mentorsList">
+    <td>{{mentor.id}}</td>
+    <td>{{mentor.mentorEmail}}</td>
+    <td>{{mentor.name}}</td>
+    <td>{{mentor.description}}</td>
+    <td>{{mentor.courseFee}}</td>
+    <td>{{mentor.duration}}</td>
+    <td>{{mentor.studentEmail}}</td>
+    <td>{{mentor.status}}</td>
+    </tr>
+    </tbody>   
+</table>      
+            </div>
+            
+        </div>
+	</div>
+</div>
