@@ -1,0 +1,46 @@
+
+
+.container-fluid {
+    padding: 60px 50px;
+  }
+h2 {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #ee4512;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  h4 {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    font-size: 19px;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }  
+  
+  .logo {
+      font-size: 250px;
+      color: #ee4512;
+    }
+
+
+header.masthead {
+  position: relative;
+  padding-top: 8rem;
+  padding-bottom: 10rem;
+  background-color: #020216f1;
+}
+  .overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+  }
+  h1 {
+    font-size: 2rem;
+  }

@@ -1,0 +1,79 @@
+<app-student-body></app-student-body>
+<div class="py-5">
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <span class="anchor" id="formLogin"></span>
+         <div class="card rounded-0">
+          <div class="card-header">
+            <h3 class="mb-0">Edit Details</h3>
+          </div>
+          <div class="card-body">
+            <form class="form" #mentorAddForm="ngForm">
+
+                <div class="form-group"
+                    [class.has-error]="addCourseIdControl.invalid && addCourseIdControl.touched" 
+                      [class.has-success]="addCourseIdControl.valid">
+                      
+                      <input type="text" [(ngModel)]="studentUpdateData.id" id="id" name="id" class="form-control rounded-0"  
+                      #addCourseIdControl="ngModel" required disabled hidden>
+                      <span class="help-block text-danger"
+                    *ngIf="addCourseIdControl.invalid && addCourseIdControl.touched">
+                Id is Required
+              </span>
+                </div>
+
+              <div class="form-group"
+              [class.has-error]="addCourseMentorEmailControl.invalid && addCourseMentorEmailControl.touched" 
+                [class.has-success]="addCourseMentorEmailControl.valid">
+                <label for="email" class="control-label">Email</label>
+                <input type="text" [(ngModel)]="studentUpdateData.email" id="email" name="email" class="form-control rounded-0" 
+                #addCourseMentorEmailControl="ngModel" required disabled>
+                <span class="help-block text-danger"
+                    *ngIf="addCourseMentorEmailControl.invalid && addCourseMentorEmailControl.touched">
+                Email is Required
+              </span>
+              </div>
+
+              <div class="form-group"
+              [class.has-error]="addCourseMentorFirstNameControl.invalid && addCourseMentorFirstNameControl.touched" 
+                [class.has-success]="addCourseMentorFirstNameControl.valid">
+                <label for="firstName" class="control-label">First Name</label>
+                <input type="text" [(ngModel)]="studentUpdateData.firstName" id="firstName" name="firstName" class="form-control rounded-0" 
+                #addCourseMentorFirstNameControl="ngModel" required>
+                <span class="help-block text-danger"
+                    *ngIf="addCourseMentorFirstNameControl.invalid && addCourseMentorFirstNameControl.touched">
+                First Name is Required
+              </span>
+              </div>
+
+              <div class="form-group"
+              [class.has-error]="addCourseMentorLastNameControl.invalid && addCourseMentorLastNameControl.touched" 
+                [class.has-success]="addCourseMentorLastNameControl.valid">
+                <label for="lastName" class="control-label">Last Name</label>
+                <input type="text" [(ngModel)]="studentUpdateData.lastName" id="lastName" name="lastName" class="form-control rounded-0" 
+                #addCourseMentorLastNameControl="ngModel" required>
+                <span class="help-block text-danger"
+                    *ngIf="addCourseMentorLastNameControl.invalid && addCourseMentorLastNameControl.touched">
+                    Last Name is Required
+              </span>
+              </div>
+
+              <div class="form-group"
+              [class.has-error]="addCourseMentorPhoneNoControl.invalid && addCourseMentorPhoneNoControl.touched" 
+                [class.has-success]="addCourseMentorPhoneNoControl.valid">
+                <label for="phoneNumber" class="control-label">Contact Number</label>
+                <input type="text" [(ngModel)]="studentUpdateData.phoneNumber" id="phoneNumber" name="phoneNumber" class="form-control rounded-0" 
+                #addCourseMentorPhoneNoControl="ngModel" required  minlength="10" maxlength="10">
+                <span class="help-block text-danger"
+                    *ngIf="addCourseMentorPhoneNoControl.invalid && addCourseMentorPhoneNoControl.touched">
+                    Contact Number is Required
+              </span>
+              </div>
+
+              <button type="button" (click)="editStudentDetails(studentUpdateData.id)" [disabled]="mentorAddForm.invalid" class="btn btn-primary float-right">Update</button>
+            </form>
+          </div>
+        </div> 
+      </div>
+    </div>
+</div>

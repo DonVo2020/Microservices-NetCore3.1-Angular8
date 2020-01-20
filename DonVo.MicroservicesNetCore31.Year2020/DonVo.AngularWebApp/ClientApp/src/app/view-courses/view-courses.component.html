@@ -1,0 +1,50 @@
+
+<app-admin-body></app-admin-body>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h4 class="text-center text-info">Running Courses</h4>
+      <div class="alert alert-info" *ngIf="errorServerMessageCourses != null">
+        <strong>Info! {{errorServerMessageCourses}}</strong>
+      </div>
+      <div class="table-responsive">
+
+
+        <table id="mytable" class="table table-bordred table-striped">
+
+          <thead>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Mentor Id</th>
+          <th>Description</th>
+          <th>Fee</th>
+          <th>Duration</th>
+          <th>Edit</th>
+          <th>Delete</th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let course of viewCourses">
+              <td>{{course.id}}</td>
+              <td>{{course.name}}</td>
+              <td>{{course.mentorEmail}}</td>
+              <td>{{course.description}}</td>
+              <td>{{course.courseFee}}</td>
+              <td>{{course.duration}}</td>
+
+              <td><button class="btn btn-primary btn-xs" (click)="editCourse(course,course.id)"><i class="fa fa-edit"></i> Edit</button></td>
+              <td><button class="btn btn-danger btn-xs" (click)="deleteCourse(course.id)"><i class="fa fa-times"></i> Delete</button></td>
+            </tr>
+
+          </tbody>
+
+        </table>
+
+
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+

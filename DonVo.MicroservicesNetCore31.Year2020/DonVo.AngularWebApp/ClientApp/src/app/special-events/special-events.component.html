@@ -1,0 +1,28 @@
+<app-student-body></app-student-body>
+<div class="container">
+  <h2 class="text-center text-info">Learn to Grow</h2>
+<div class="row mt-5">
+  <div class="col-md-4 mb-3" *ngFor="let event of specialEvents">
+    <div class="card text-center">
+      <div class="card-body">
+        <h5 class="card-title">{{event.name}}</h5>
+        <p class="card-text">{{event.description}}</p>
+        <p class="card-text">Course Fee: {{event.courseFee}}</p>
+        <p class="card-text">Course Id: {{event.id}}</p>
+        <button type="button" class="btn btn-success"(click)="updateEnrolledCourse(event.id,_authService.loggedInUserName(),event)" data-toggle="tooltip" data-placement="bottom" title="Click To Change Status!">{{event.status}}</button>
+      </div>
+      <div class="card-footer text-muted">
+          Duration: {{event.duration}}  <br>
+          Mentor: {{event.mentorEmail}}
+      </div>
+    </div>
+  </div>
+</div>
+</div> 
+<script>
+  $(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+  </script>
+
+

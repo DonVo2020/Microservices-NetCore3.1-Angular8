@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark"  *ngIf="router.url != '/ongoingCourses'">
+    <a class="navbar-brand"routerLink="/" routerLinkActive="active">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/events" routerLinkActive="active">Courses</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  *ngIf="_authService.loggedIn()" routerLink="/special" routerLinkActive="active">Enrolled Courses</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  *ngIf="_authService.loggedIn()" routerLink="/studentProfile" routerLinkActive="active">My Profile</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+          <a class="nav-link" *ngIf="!_authService.loggedIn()" routerLink="/login" routerLinkActive="active">Login</a>
+          <a class="nav-link" *ngIf="!_authService.loggedIn()" routerLink="/register" routerLinkActive="active">Register</a>
+          <a class="nav-link" style="cursor:pointer" *ngIf="_authService.loggedIn()">Welcome {{_authService.loggedInUserName()}}</a>
+          <a class="nav-link" style="cursor:pointer" *ngIf="_authService.loggedIn()" (click)="_authService.logoutUser()">Logout</a> 
+      </ul>
+      
+    </div>
+  </nav> 
+
+<app-search-course *ngIf="router.url == '/events' || router.url == '/special'"></app-search-course>

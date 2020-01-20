@@ -1,6 +1,51 @@
-<body>
-  <app-nav-menu></app-nav-menu>
-  <div class="container">
-    <router-outlet></router-outlet>
+<div class="div1" *ngIf="router.url == '/' || router.url == '/contactUs'">
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+    <a class="navbar-brand" routerLink="/" routerLinkActive="active">School Management</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/events" routerLinkActive="active">Courses</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contactUs" routerLinkActive="active">Contact Us</a>
+        </li>
+
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Login As</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" routerLink="/login" routerLinkActive="active">Student</a>
+            <a class="dropdown-item" routerLink="/mentor-login" routerLinkActive="active">Mentor</a>
+            <a class="dropdown-item" routerLink="/admin-login" routerLinkActive="active">Admin</a>
+          </div>
+        </li>
+
+      </ul>
+
+    </div>
+  </nav>
+</div>
+
+<div class="div2" *ngIf="router.url == '/'">
+  <app-search-course></app-search-course>
+  <!-- Container (About Section) -->
+  <div id="about" class="container-fluid">
+    <div class="row">
+      <div class="col-sm-8">
+        <h2>About Company Page</h2><br>
+        <h4>Content Here ...</h4><br>
+        <p>Content Here ...</p>
+        <!--<br><button class="btn btn-info btn-lg">Get in Touch</button>-->
+      </div>
+      <div class="col-sm-4">
+        <span><i class="fa fa-institution" style="font-size:250px;color:orangered"></i></span>
+      </div>
+    </div>
   </div>
-</body>
+</div>
+<router-outlet></router-outlet>

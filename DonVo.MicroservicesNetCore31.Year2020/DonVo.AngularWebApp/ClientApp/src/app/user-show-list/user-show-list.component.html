@@ -1,0 +1,44 @@
+
+<app-admin-body></app-admin-body>
+<div class="container">
+	<div class="row">
+        <div class="col-md-12">
+        <h4 class="text-center text-info">Students List</h4>
+        <div class="alert alert-info" *ngIf="errorServerMessageCourses != null">
+            <strong>Info! {{errorServerMessageCourses}}</strong> 
+          </div>
+        <div class="table-responsive">
+
+                
+              <table id="mytable" class="table table-bordred table-striped">
+                   
+                   <thead>
+                  
+                    <th>First Name</th>
+                     <th>Last Name</th>
+                     <th>Student Email</th>
+                     <th>Phone Number</th>
+                      <th>Status</th>
+                     
+                   </thead>
+    <tbody>   
+    <tr *ngFor=" let users of usersList">
+    
+    <td>{{users.firstName}}</td>
+    <td>{{users.lastName}}</td>
+    <td>{{users.email}}</td>
+    <td>{{users.phoneNumber}}</td>
+ 
+    <td><button *ngIf="users.active" class="btn btn-danger btn-xs" (click)="Block(users.id)"><i class="fa fa-ban"></i>Block</button>
+      <button *ngIf="!users.active" class="btn btn-primary btn-xs" (click)="Unblock(users.id)"><i class="fa fa-ban"></i>UnBlock</button></td>
+    </tr>
+  
+    </tbody>
+        
+</table>
+        
+            </div>
+            
+        </div>
+	</div>
+</div>
